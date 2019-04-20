@@ -1,0 +1,36 @@
+{
+  "name": "google-clients",
+  "version": "1.0.0",
+  "description": "Simple wrappers for Google APIs",
+  "main": "index.js",
+  "scripts": {
+    "test": "nyc mocha ./lib/*.tests.js",
+    "lint": "./node_modules/.bin/eslint *.js lib/*.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/jhatch/google-clients.git"
+  },
+  "keywords": [
+    "Google"
+  ],
+  "author": "John Hatcher",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/jhatch/google-clients/issues"
+  },
+  "homepage": "https://github.com/jhatch/google-clients#readme",
+  "dependencies": {
+    "googleapis": "37.2.0",
+    "moment": "2.24.0"
+  },
+  "devDependencies": {
+    "chai": "4.2.0",
+    "eslint": "5.16.0",
+    "eslint-config-airbnb-base": "13.1.0",
+    "eslint-plugin-import": "2.16.0",
+    "mocha": "6.0.2",
+    "nyc": "13.3.0",
+    "sinon": "7.3.1"
+  }
+}
