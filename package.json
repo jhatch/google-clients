@@ -1,6 +1,6 @@
 {
   "name": "google-clients",
-  "version": "1.3.0",
+  "version": "1.4.0",
   "description": "Simple wrappers for Google APIs",
   "main": "index.js",
   "scripts": {
