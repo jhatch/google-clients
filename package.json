@@ -1,6 +1,6 @@
 {
   "name": "google-clients",
-  "version": "1.5.1",
+  "version": "2.0.0",
   "description": "Simple wrappers for Google APIs",
   "main": "index.js",
   "scripts": {
@@ -9,7 +9,7 @@
     "lint": "npm run lint:code && npm run lint:docs",
     "lint:code": "./node_modules/.bin/eslint *.js lib/*.js",
     "lint:docs": "./node_modules/.bin/documentation lint ./lib/*.js",
-    "docs": "./node_modules/.bin/documentation readme ./lib/*.js -s \"Documentation\" --github --quiet"
+    "docs": "./node_modules/.bin/documentation readme ./lib/*.js -s \"Documentation\" --github --quiet && echo \"Updated README.md with latest docs\""
   },
   "repository": {
     "type": "git",
