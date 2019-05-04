@@ -42,10 +42,16 @@
 -   [GoogleMail](#googlemail)
     -   [send](#send)
         -   [Parameters](#parameters-15)
+-   [GoogleSheet](#googlesheet)
+    -   [Parameters](#parameters-16)
+    -   [load](#load-1)
+        -   [Parameters](#parameters-17)
+    -   [update](#update)
+        -   [Parameters](#parameters-18)
 
 ### GoogleAPI
 
-[lib/GoogleAPI.js:8-65](https://github.com/jhatch/google-clients/blob/94e625a2683f01b5d6aa66b7b0190f438c86ffce/lib/GoogleAPI.js#L8-L65 "Source code on GitHub")
+[lib/GoogleAPI.js:8-65](https://github.com/jhatch/google-clients/blob/38020584c74969b254fa26236725c73e2d26d905/lib/GoogleAPI.js#L8-L65 "Source code on GitHub")
 
 Handle oauth handshake for any Google API, usually extended
 
@@ -55,7 +61,7 @@ Handle oauth handshake for any Google API, usually extended
 
 #### authorize
 
-[lib/GoogleAPI.js:29-45](https://github.com/jhatch/google-clients/blob/94e625a2683f01b5d6aa66b7b0190f438c86ffce/lib/GoogleAPI.js#L29-L45 "Source code on GitHub")
+[lib/GoogleAPI.js:29-45](https://github.com/jhatch/google-clients/blob/38020584c74969b254fa26236725c73e2d26d905/lib/GoogleAPI.js#L29-L45 "Source code on GitHub")
 
 Create an OAuth2 client with the given credentials and then
 create an api client with the given token
@@ -67,7 +73,7 @@ create an api client with the given token
 
 #### getApiVersion
 
-[lib/GoogleAPI.js:18-21](https://github.com/jhatch/google-clients/blob/94e625a2683f01b5d6aa66b7b0190f438c86ffce/lib/GoogleAPI.js#L18-L21 "Source code on GitHub")
+[lib/GoogleAPI.js:18-21](https://github.com/jhatch/google-clients/blob/38020584c74969b254fa26236725c73e2d26d905/lib/GoogleAPI.js#L18-L21 "Source code on GitHub")
 
 should be overriden by child class
 
@@ -75,7 +81,7 @@ Returns **{name: [string](https://developer.mozilla.org/docs/Web/JavaScript/Refe
 
 ### GoogleCalendar
 
-[lib/GoogleCalendar.js:10-151](https://github.com/jhatch/google-clients/blob/94e625a2683f01b5d6aa66b7b0190f438c86ffce/lib/GoogleCalendar.js#L10-L151 "Source code on GitHub")
+[lib/GoogleCalendar.js:10-151](https://github.com/jhatch/google-clients/blob/38020584c74969b254fa26236725c73e2d26d905/lib/GoogleCalendar.js#L10-L151 "Source code on GitHub")
 
 Pull event data from your Google Calendar
 
@@ -85,7 +91,7 @@ Pull event data from your Google Calendar
 
 #### load
 
-[lib/GoogleCalendar.js:50-70](https://github.com/jhatch/google-clients/blob/94e625a2683f01b5d6aa66b7b0190f438c86ffce/lib/GoogleCalendar.js#L50-L70 "Source code on GitHub")
+[lib/GoogleCalendar.js:50-70](https://github.com/jhatch/google-clients/blob/38020584c74969b254fa26236725c73e2d26d905/lib/GoogleCalendar.js#L50-L70 "Source code on GitHub")
 
 load all events on your calendar for given time range
 
@@ -98,7 +104,7 @@ Returns **[Promise](https://developer.mozilla.org/docs/Web/JavaScript/Reference/
 
 #### getNextEvent
 
-[lib/GoogleCalendar.js:78-86](https://github.com/jhatch/google-clients/blob/94e625a2683f01b5d6aa66b7b0190f438c86ffce/lib/GoogleCalendar.js#L78-L86 "Source code on GitHub")
+[lib/GoogleCalendar.js:78-86](https://github.com/jhatch/google-clients/blob/38020584c74969b254fa26236725c73e2d26d905/lib/GoogleCalendar.js#L78-L86 "Source code on GitHub")
 
 get the next event in the future that
 has given email as an attendee
@@ -111,7 +117,7 @@ Returns **([GoogleCalendarEvent](#googlecalendarevent) | null)**
 
 #### getLastEvent
 
-[lib/GoogleCalendar.js:94-102](https://github.com/jhatch/google-clients/blob/94e625a2683f01b5d6aa66b7b0190f438c86ffce/lib/GoogleCalendar.js#L94-L102 "Source code on GitHub")
+[lib/GoogleCalendar.js:94-102](https://github.com/jhatch/google-clients/blob/38020584c74969b254fa26236725c73e2d26d905/lib/GoogleCalendar.js#L94-L102 "Source code on GitHub")
 
 get the last event in the past that
 has given email as an attendee
@@ -124,7 +130,7 @@ Returns **([GoogleCalendarEvent](#googlecalendarevent) | null)**
 
 #### isScheduled
 
-[lib/GoogleCalendar.js:110-114](https://github.com/jhatch/google-clients/blob/94e625a2683f01b5d6aa66b7b0190f438c86ffce/lib/GoogleCalendar.js#L110-L114 "Source code on GitHub")
+[lib/GoogleCalendar.js:110-114](https://github.com/jhatch/google-clients/blob/38020584c74969b254fa26236725c73e2d26d905/lib/GoogleCalendar.js#L110-L114 "Source code on GitHub")
 
 return true if any event in the future
 has given email as an attendee
@@ -137,7 +143,7 @@ Returns **[boolean](https://developer.mozilla.org/docs/Web/JavaScript/Reference/
 
 #### computeWeeksSinceLastSeen
 
-[lib/GoogleCalendar.js:123-133](https://github.com/jhatch/google-clients/blob/94e625a2683f01b5d6aa66b7b0190f438c86ffce/lib/GoogleCalendar.js#L123-L133 "Source code on GitHub")
+[lib/GoogleCalendar.js:123-133](https://github.com/jhatch/google-clients/blob/38020584c74969b254fa26236725c73e2d26d905/lib/GoogleCalendar.js#L123-L133 "Source code on GitHub")
 
 Count how many weeks it's been
 since you last had an event with
@@ -151,7 +157,7 @@ Returns **[number](https://developer.mozilla.org/docs/Web/JavaScript/Reference/G
 
 #### computeLastSeenScore
 
-[lib/GoogleCalendar.js:145-150](https://github.com/jhatch/google-clients/blob/94e625a2683f01b5d6aa66b7b0190f438c86ffce/lib/GoogleCalendar.js#L145-L150 "Source code on GitHub")
+[lib/GoogleCalendar.js:145-150](https://github.com/jhatch/google-clients/blob/38020584c74969b254fa26236725c73e2d26d905/lib/GoogleCalendar.js#L145-L150 "Source code on GitHub")
 
 Based on your target frequency in seeing someone, compute
 based on how long since you last saw them - how far off you are
@@ -167,7 +173,7 @@ Returns **[number](https://developer.mozilla.org/docs/Web/JavaScript/Reference/G
 
 ### GoogleCalendarEvent
 
-[lib/GoogleCalendarEvent.js:9-109](https://github.com/jhatch/google-clients/blob/94e625a2683f01b5d6aa66b7b0190f438c86ffce/lib/GoogleCalendarEvent.js#L9-L109 "Source code on GitHub")
+[lib/GoogleCalendarEvent.js:9-109](https://github.com/jhatch/google-clients/blob/38020584c74969b254fa26236725c73e2d26d905/lib/GoogleCalendarEvent.js#L9-L109 "Source code on GitHub")
 
 Add utilities, handle data inconsistencies, and provide a clean
 interface for interacting with
@@ -179,7 +185,7 @@ interface for interacting with
 
 #### isAttending
 
-[lib/GoogleCalendarEvent.js:84-87](https://github.com/jhatch/google-clients/blob/94e625a2683f01b5d6aa66b7b0190f438c86ffce/lib/GoogleCalendarEvent.js#L84-L87 "Source code on GitHub")
+[lib/GoogleCalendarEvent.js:84-87](https://github.com/jhatch/google-clients/blob/38020584c74969b254fa26236725c73e2d26d905/lib/GoogleCalendarEvent.js#L84-L87 "Source code on GitHub")
 
 Is the given email on your attendee list?
 
@@ -191,7 +197,7 @@ Returns **[boolean](https://developer.mozilla.org/docs/Web/JavaScript/Reference/
 
 #### isFuture
 
-[lib/GoogleCalendarEvent.js:93-95](https://github.com/jhatch/google-clients/blob/94e625a2683f01b5d6aa66b7b0190f438c86ffce/lib/GoogleCalendarEvent.js#L93-L95 "Source code on GitHub")
+[lib/GoogleCalendarEvent.js:93-95](https://github.com/jhatch/google-clients/blob/38020584c74969b254fa26236725c73e2d26d905/lib/GoogleCalendarEvent.js#L93-L95 "Source code on GitHub")
 
 Is this event currently in the future?
 
@@ -199,7 +205,7 @@ Returns **[boolean](https://developer.mozilla.org/docs/Web/JavaScript/Reference/
 
 #### toObject
 
-[lib/GoogleCalendarEvent.js:102-108](https://github.com/jhatch/google-clients/blob/94e625a2683f01b5d6aa66b7b0190f438c86ffce/lib/GoogleCalendarEvent.js#L102-L108 "Source code on GitHub")
+[lib/GoogleCalendarEvent.js:102-108](https://github.com/jhatch/google-clients/blob/38020584c74969b254fa26236725c73e2d26d905/lib/GoogleCalendarEvent.js#L102-L108 "Source code on GitHub")
 
 Get an object representation of this event for us in
 email template rendering
@@ -208,7 +214,7 @@ Returns **{summary, htmlLink, date}**
 
 #### cleanEmail
 
-[lib/GoogleCalendarEvent.js:23-29](https://github.com/jhatch/google-clients/blob/94e625a2683f01b5d6aa66b7b0190f438c86ffce/lib/GoogleCalendarEvent.js#L23-L29 "Source code on GitHub")
+[lib/GoogleCalendarEvent.js:23-29](https://github.com/jhatch/google-clients/blob/38020584c74969b254fa26236725c73e2d26d905/lib/GoogleCalendarEvent.js#L23-L29 "Source code on GitHub")
 
 clean an email so its reliable in a comparison
 remove: white space and periods
@@ -221,7 +227,7 @@ Returns **[string](https://developer.mozilla.org/docs/Web/JavaScript/Reference/G
 
 #### emailMatch
 
-[lib/GoogleCalendarEvent.js:37-39](https://github.com/jhatch/google-clients/blob/94e625a2683f01b5d6aa66b7b0190f438c86ffce/lib/GoogleCalendarEvent.js#L37-L39 "Source code on GitHub")
+[lib/GoogleCalendarEvent.js:37-39](https://github.com/jhatch/google-clients/blob/38020584c74969b254fa26236725c73e2d26d905/lib/GoogleCalendarEvent.js#L37-L39 "Source code on GitHub")
 
 clean and compare two emails
 
@@ -234,7 +240,7 @@ Returns **[boolean](https://developer.mozilla.org/docs/Web/JavaScript/Reference/
 
 #### sortByDateAsc
 
-[lib/GoogleCalendarEvent.js:48-58](https://github.com/jhatch/google-clients/blob/94e625a2683f01b5d6aa66b7b0190f438c86ffce/lib/GoogleCalendarEvent.js#L48-L58 "Source code on GitHub")
+[lib/GoogleCalendarEvent.js:48-58](https://github.com/jhatch/google-clients/blob/38020584c74969b254fa26236725c73e2d26d905/lib/GoogleCalendarEvent.js#L48-L58 "Source code on GitHub")
 
 Implement a compare function for Array#sort on events
 to sort by date ascending
@@ -248,7 +254,7 @@ Returns **[number](https://developer.mozilla.org/docs/Web/JavaScript/Reference/G
 
 #### sortByDateDesc
 
-[lib/GoogleCalendarEvent.js:67-77](https://github.com/jhatch/google-clients/blob/94e625a2683f01b5d6aa66b7b0190f438c86ffce/lib/GoogleCalendarEvent.js#L67-L77 "Source code on GitHub")
+[lib/GoogleCalendarEvent.js:67-77](https://github.com/jhatch/google-clients/blob/38020584c74969b254fa26236725c73e2d26d905/lib/GoogleCalendarEvent.js#L67-L77 "Source code on GitHub")
 
 Implement a compare function for Array#sort on events
 to sort by date descending
@@ -262,7 +268,7 @@ Returns **[number](https://developer.mozilla.org/docs/Web/JavaScript/Reference/G
 
 ### GoogleMail
 
-[lib/GoogleMail.js:7-50](https://github.com/jhatch/google-clients/blob/94e625a2683f01b5d6aa66b7b0190f438c86ffce/lib/GoogleMail.js#L7-L50 "Source code on GitHub")
+[lib/GoogleMail.js:7-50](https://github.com/jhatch/google-clients/blob/38020584c74969b254fa26236725c73e2d26d905/lib/GoogleMail.js#L7-L50 "Source code on GitHub")
 
 **Extends GoogleAPI**
 
@@ -270,7 +276,7 @@ Send emails through your G-Mail account
 
 #### send
 
-[lib/GoogleMail.js:18-49](https://github.com/jhatch/google-clients/blob/94e625a2683f01b5d6aa66b7b0190f438c86ffce/lib/GoogleMail.js#L18-L49 "Source code on GitHub")
+[lib/GoogleMail.js:18-49](https://github.com/jhatch/google-clients/blob/38020584c74969b254fa26236725c73e2d26d905/lib/GoogleMail.js#L18-L49 "Source code on GitHub")
 
 Send some HTML through your gmail account
 
@@ -279,6 +285,47 @@ Send some HTML through your gmail account
 -   `from` **{name: [string](https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/String), email: [string](https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/String)}** 
 -   `to` **{name: [string](https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/String), email: [string](https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/String)}** 
 -   `contents` **{subject: [string](https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/String), html: [string](https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/String)}** 
+
+### GoogleSheet
+
+[lib/GoogleSheet.js:9-84](https://github.com/jhatch/google-clients/blob/38020584c74969b254fa26236725c73e2d26d905/lib/GoogleSheet.js#L9-L84 "Source code on GitHub")
+
+**Extends GoogleAPI**
+
+Read and write rows in a Google Sheet
+
+#### Parameters
+
+-   `creds` **[Object](https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Object)** 
+-   `config` **[Object](https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Object)**  (optional, default `{}`)
+
+#### load
+
+[lib/GoogleSheet.js:40-56](https://github.com/jhatch/google-clients/blob/38020584c74969b254fa26236725c73e2d26d905/lib/GoogleSheet.js#L40-L56 "Source code on GitHub")
+
+Load a given range in a given sheet
+
+##### Parameters
+
+-   `sheetId` **[string](https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/String)** 
+-   `range` **[string](https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/String)** 
+
+Returns **[Promise](https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Promise)** 
+
+#### update
+
+[lib/GoogleSheet.js:66-83](https://github.com/jhatch/google-clients/blob/38020584c74969b254fa26236725c73e2d26d905/lib/GoogleSheet.js#L66-L83 "Source code on GitHub")
+
+Write the given values into the given range of
+the given sheet
+
+##### Parameters
+
+-   `id` **[string](https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/String)** 
+-   `range` **[string](https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/String)** 
+-   `values` **[Array](https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Array)&lt;[Array](https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Array)>** 
+
+Returns **[Promise](https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Promise)** 
 
 ## Tests
 
