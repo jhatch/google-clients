@@ -4,8 +4,12 @@
   "description": "Simple wrappers for Google APIs",
   "main": "index.js",
   "scripts": {
+    "check": "npm run lint && npm run test && npm run docs",
     "test": "nyc mocha ./lib/*.test.js",
-    "lint": "./node_modules/.bin/eslint *.js lib/*.js"
+    "lint": "npm run lint:code && npm run lint:docs",
+    "lint:code": "./node_modules/.bin/eslint *.js lib/*.js",
+    "lint:docs": "./node_modules/.bin/documentation lint ./lib/*.js",
+    "docs": "./node_modules/.bin/documentation readme ./lib/*.js -s \"Documentation\" --github --quiet"
   },
   "repository": {
     "type": "git",
@@ -26,6 +30,7 @@
   },
   "devDependencies": {
     "chai": "4.2.0",
+    "documentation": "^10.1.0",
     "eslint": "5.16.0",
     "eslint-config-airbnb-base": "13.1.0",
     "eslint-plugin-import": "2.16.0",
