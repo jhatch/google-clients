@@ -26,7 +26,7 @@
   "homepage": "https://github.com/jhatch/google-clients#readme",
   "dependencies": {
     "googleapis": "^44.0.0",
-    "moment": "^2.24.0"
+    "moment": "^2.29.2"
   },
   "devDependencies": {
     "chai": "4.2.0",
